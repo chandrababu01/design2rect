@@ -1,5 +1,12 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
+import figma from "./servies/figma.svg";
+import photoshop from "./servies/photoshop.svg";
+import illustrator from "./servies/adobe-illust.svg";
+import afterEffects from "./servies/After_Effects.svg";
+import premiere from "./servies/Adobe_Premiere.svg";
+import removebg from "./servies/removebg.svg";
+import cinema from "./servies/cinema.svg";
 
 export const Service = () => {
   return (
@@ -50,46 +57,31 @@ export const Service = () => {
                 <div className="service-page-tootls-icons d-flex justify-content-center flex-wrap mt-4">
                   <ul>
                     <li className="servies-logo adobe-products">
-                      <img
-                        src="../src/servies/figma.svg"
-                        alt="Adobe Photoshop1"
-                      />
+                      <img src={figma} alt="Figma" />
                     </li>
+
                     <li className="servies-logo adobe-products1">
-                      <img
-                        src="../src/servies/photoshop.svg"
-                        alt="Adobe Illustrator"
-                      />
+                      <img src={photoshop} alt="Photoshop" />
                     </li>
+
                     <li className="servies-logo adobe-products1">
-                      <img
-                        src="../src/servies/adobe-illust.svg"
-                        alt="Adobe After Effects"
-                      />
+                      <img src={illustrator} alt="Illustrator" />
                     </li>
+
                     <li className="servies-logo adobe-products">
-                      <img
-                        src="../src/servies/After_Effects.svg"
-                        alt="Adobe After Effects"
-                      />
+                      <img src={afterEffects} alt="After Effects" />
                     </li>
+
                     <li className="servies-logo adobe-products2">
-                      <img
-                        src="../src/servies/Adobe_Premiere.svg"
-                        alt="Adobe After Effects"
-                      />
+                      <img src={premiere} alt="Premiere Pro" />
                     </li>
+
                     <li className="servies-logo adobe-products">
-                      <img
-                        src="../src/servies/removebg.svg"
-                        alt="Adobe After Effects"
-                      />
+                      <img src={removebg} alt="Remove BG" />
                     </li>
+
                     <li className="servies-logo adobe-products1">
-                      <img
-                        src="../src/servies/cinema.svg"
-                        alt="Adobe After Effects"
-                      />
+                      <img src={cinema} alt="Cinema 4D" />
                     </li>
                   </ul>
                 </div>

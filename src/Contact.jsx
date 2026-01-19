@@ -1,6 +1,13 @@
 import React from "react";
 import ContactForm from "./ContactForm";
 import { Link } from "react-router-dom";
+import figma from "./servies/figma.svg";
+import photoshop from "./servies/photoshop.svg";
+import illustrator from "./servies/adobe-illust.svg";
+import afterEffects from "./servies/After_Effects.svg";
+import premiere from "./servies/Adobe_Premiere.svg";
+import removebg from "./servies/removebg.svg";
+import cinema from "./servies/cinema.svg";
 
 export const Contact = () => {
   return (
@@ -42,46 +49,31 @@ export const Contact = () => {
                 <div className="service-page-tootls-icons d-flex justify-content-center flex-wrap mt-4">
                   <ul>
                     <li className="servies-logo adobe-products">
-                      <img
-                        src="../src/servies/figma.svg"
-                        alt="Adobe Photoshop1"
-                      />
+                      <img src={figma} alt="Figma" />
                     </li>
+
                     <li className="servies-logo adobe-products1">
-                      <img
-                        src="../src/servies/photoshop.svg"
-                        alt="Adobe Illustrator"
-                      />
+                      <img src={photoshop} alt="Photoshop" />
                     </li>
+
                     <li className="servies-logo adobe-products1">
-                      <img
-                        src="../src/servies/adobe-illust.svg"
-                        alt="Adobe After Effects"
-                      />
+                      <img src={illustrator} alt="Illustrator" />
                     </li>
+
                     <li className="servies-logo adobe-products">
-                      <img
-                        src="../src/servies/After_Effects.svg"
-                        alt="Adobe After Effects"
-                      />
+                      <img src={afterEffects} alt="After Effects" />
                     </li>
+
                     <li className="servies-logo adobe-products2">
-                      <img
-                        src="../src/servies/Adobe_Premiere.svg"
-                        alt="Adobe After Effects"
-                      />
+                      <img src={premiere} alt="Premiere Pro" />
                     </li>
+
                     <li className="servies-logo adobe-products">
-                      <img
-                        src="../src/servies/removebg.svg"
-                        alt="Adobe After Effects"
-                      />
+                      <img src={removebg} alt="Remove Background" />
                     </li>
+
                     <li className="servies-logo adobe-products1">
-                      <img
-                        src="../src/servies/cinema.svg"
-                        alt="Adobe After Effects"
-                      />
+                      <img src={cinema} alt="Cinema 4D" />
                     </li>
                   </ul>
                 </div>
@@ -90,8 +82,10 @@ export const Contact = () => {
           </div>
         </div>
       </section>
-      <section className="contact-page-map-section my-5 
-      pt-5 pb-5">
+      <section
+        className="contact-page-map-section my-5 
+      pt-5 pb-5"
+      >
         <div className="container">
           <div className="row">
             <div className="col-md-3">
@@ -104,13 +98,11 @@ export const Contact = () => {
                   </Link>
                 </div>
               </div>
-               <div className="contact-page-map-section-wrapper py-5">
+              <div className="contact-page-map-section-wrapper py-5">
                 <div className="title mb-4">Call us</div>
                 <div className="submary-content">
                   <p>We are happy to answer them.</p>
-                  <Link href="tel:+917010846495">
-                    +91 7010846495
-                  </Link>
+                  <Link href="tel:+917010846495">+91 7010846495</Link>
                 </div>
               </div>
             </div>
@@ -130,7 +122,7 @@ export const Contact = () => {
                   referrerPolicy="no-referrer-when-downgrade"
                   title="contact-map"
                 ></iframe>
-              </div>  
+              </div>
             </div>
           </div>
         </div>

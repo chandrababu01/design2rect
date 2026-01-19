@@ -942,3 +942,10 @@
     filter: none;
   }
 }
+
+
+@media (max-width: 768px) {
+  .hero-3d-bg {
+    display: none;
+  }
+}

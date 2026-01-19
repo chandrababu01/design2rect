@@ -102,6 +102,7 @@ import m14 from "./assets/images/3d-modular-buildings/14.png";
 import m15 from "./assets/images/3d-modular-buildings/15.png";
 import m16 from "./assets/images/3d-modular-buildings/16.png";
 import m17 from "./assets/images/3d-modular-buildings/17.png";
+import banner from "./protfolio/protfolio.svg";
 
 function TabPanel({ value, index, children }) {
   return value === index ? <Box sx={{ pt: 4 }}>{children}</Box> : null;
@@ -134,7 +135,7 @@ export const Portfolio = () => {
             </div>
             <div className="col-md-7">
               <div className="portfolio-layers">
-                <img src="../src/protfolio/protfolio.svg" alt="img" />
+                <img src={banner} alt="img" />
               </div>
             </div>
           </div>
