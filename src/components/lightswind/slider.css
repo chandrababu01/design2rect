@@ -1,0 +1,112 @@
+.slider-wrapper {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  /* background: #141414; */
+}
+
+/* FADE EDGES */
+.slider-wrapper::before,
+.slider-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 140px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.slider-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #141414, transparent);
+}
+
+.slider-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #141414, transparent);
+}
+
+/* TRACK */
+.slider-track {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  width: max-content;
+
+  transform: translate3d(calc(-1 * var(--start-offset)), 0, 0);
+
+  animation-name: marquee;
+  animation-duration: var(--duration);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  will-change: transform;
+}
+
+/* PAUSE */
+.slider-wrapper.paused .slider-track {
+  animation-play-state: paused;
+}
+
+/* CARD */
+.slider-card {
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 18px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  backface-visibility: hidden;
+}
+
+/* CENTER CARD */
+.slider-card.active {
+  transform: scale(1.1) !important;
+  z-index: 6;
+  box-shadow:
+    0 0 60px rgba(0,180,255,0.35),
+    0 35px 80px rgba(0,0,0,0.65);
+}
+
+/* PLAY OVERLAY */
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  color: #fff;
+  background: rgba(0,0,0,0.25);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 18px;
+}
+
+.slider-card:hover .play-overlay,
+.slider-card.active .play-overlay {
+  opacity: 1;
+}
+
+/* INFINITE PERFECT LOOP */
+@keyframes marquee {
+  from {
+    transform: translate3d(calc(-1 * var(--start-offset)), 0, 0);
+  }
+  to {
+    transform: translate3d(
+      calc(-1 * (var(--distance) + var(--start-offset))),
+      0,
+      0
+    );
+  }
+}
