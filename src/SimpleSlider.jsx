@@ -1,5 +1,14 @@
 import React from "react";
 import Slider from "react-slick";
+import client1 from "./assets/our-clients/ourclient-1.png";
+import client2 from "./assets/our-clients/logo.png";
+import client3 from "./assets/our-clients/ourclient-3.png";
+import client4 from "./assets/our-clients/ourclient-4.png";
+import client5 from "./assets/our-clients/oruclient-2.png";
+
+
+
+
 
 export function SimpleSlider() {
   var settings = {
@@ -46,81 +55,67 @@ export function SimpleSlider() {
       <Slider {...settings}>
         <div>
           <div className="our-slider-content">
-            <div className="title">Company-Name</div>
+            {/* <div className="title"></div> */}
             <div className="sub-cotent">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
+              Design2Client helped us transform our product interface into a
+              clean, user-friendly experience that improved engagement and
+              conversions.
             </div>
+            <div className="py-2 mb-2 d-block text-center">UI/UX / product design</div>
             <div className="our-client-logo">
-              <img
-                src="../src/assets/our-clients/ourclient-1.png"
-                alt="logo"
-                className="logo-img"
-              />
+               <img src={client1} alt="logo" className="logo-img" />
             </div>
           </div>
         </div>
         <div>
           <div className="our-slider-content">
-            <div className="title">Company-Name</div>
+            {/* <div className="title">Banking / Finance</div> */}
             <div className="sub-cotent">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
+              The team delivered a professional design system aligned with our
+              brand guidelines while meeting strict enterprise requirements.
             </div>
+            <div className="py-2 mb-2 d-block text-center">Corporate / finance clients</div>
             <div className="our-client-logo">
-              <img
-                src="../src/assets/our-clients/oruclient-2.png"
-                alt="logo"
-                className="logo-img"
-              />
+                 <img src={client2} alt="logo" className="logo-img" />
             </div>
           </div>
         </div>
         <div>
           <div className="our-slider-content">
-            <div className="title">Company-Name</div>
+            {/* <div className="title">Company-Name</div> */}
             <div className="sub-cotent">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
+              Their design approach and attention to detail helped us build
+              credibility and trust with our clients.
             </div>
+            <div  className="py-2 mb-2 d-block text-center">Consulting, service companies </div>
             <div className="our-client-logo">
-              <img
-                src="../src/assets/our-clients/ourclient-3.png"
-                alt="logo"
-                className="logo-img"
-              />
+              <img src={client3} alt="logo" className="logo-img" />
             </div>
           </div>
         </div>
         <div>
           <div className="our-slider-content">
-            <div className="title">Company-Name</div>
+            {/* <div className="title">Company-Name</div> */}
             <div className="sub-cotent">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
+              Their design approach aligned perfectly with our brand standards
+              while maintaining enterprise-level clarity.
             </div>
+            <div  className="py-2 mb-2 d-block text-center">Enterprise Design </div>
             <div className="our-client-logo">
-              <img
-                src="../src/assets/our-clients/ourclient-4.png"
-                alt="logo"
-                className="logo-img"
-              />
+               <img src={client4} alt="logo" className="logo-img" />
             </div>
           </div>
         </div>
         <div>
           <div className="our-slider-content">
-            <div className="title">Company-Name</div>
+            {/* <div className="title">Company-Name</div> */}
             <div className="sub-cotent">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
+              A creative team that understands business goals and delivers
+              designs that build trust and credibility.
             </div>
+            <div  className="py-2 mb-2 d-block text-center">Brand Identity </div>
             <div className="our-client-logo">
-              <img
-                src="../src/assets/our-clients/ourclient-5.jpg"
-                alt="logo"
-                className="logo-img"
-              />
+               <img src={client5} alt="logo" className="logo-img" />
             </div>
           </div>
         </div>

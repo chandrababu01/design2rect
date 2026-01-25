@@ -9,3 +9,113 @@
     }
  
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* ===============================
+   RIGHT SIDE MENU – OFFCANVAS
+=============================== */
+
+.offcanvas {
+  background-color: #000; // 🔥 full black background
+  color: #fff;
+}
+
+/* Header title */
+.offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  .offcanvas-title {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .btn-close {
+    filter: invert(1); // close icon white
+  }
+}
+
+/* ===============================
+   MENU LINKS
+=============================== */
+
+.offcanvas-body {
+  padding-top: 2.5rem;
+}
+
+.offcanvas-body .nav {
+  width: 100%;
+}
+
+/* each menu item */
+.offcanvas-body .nav-link {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.75rem 0;
+  position: relative;
+  transition: all 0.35s ease;
+}
+
+/* 🔥 hover animation */
+.offcanvas-body .nav-link:hover {
+  color: #f7ff00;
+  transform: translateX(8px);
+}
+
+/* underline animation */
+.offcanvas-body .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #f7ff00;
+  transition: width 0.35s ease;
+}
+
+.offcanvas-body .nav-link:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   ACTIVE LINK (scroll spy)
+=============================== */
+
+.active-link {
+  color: #f7ff00 !important;
+  font-weight: 600;
+}
+
+.active-link::after {
+  width: 100% !important;
+}
+
+/* ===============================
+   MOBILE TOUCH POLISH
+=============================== */
+@media (hover: none) {
+  .offcanvas-body .nav-link:hover {
+    transform: none;
+  }
+}
+
+.offcanvas.show {
+  animation: slideFadeIn 0.4s ease;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
